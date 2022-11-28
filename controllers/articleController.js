@@ -59,8 +59,11 @@ module.exports.postArticle=async (req,res,next)=>{
 // getting the posts from database
 module.exports.getArticle=async (req,res,next)=>{
     console.log(req.query)
+    if(req.query.title!=""){
 
-    const data = await Articles.find({"title":{"$regex":`${req.query.title}`,"$options": "i" }})
-    res.send(data)
+        var data = await Articles.find({"title":{"$regex":`${req.query.title}`,"$options": "i" }})
+        res.send(data)
+    }
+
 }
 

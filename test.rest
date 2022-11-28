@@ -1,12 +1,12 @@
-GET http://localhost:8001/getarticle?title=service
-# Content-Type: application/json
+POST http://localhost:8001/postarticle
+Content-Type: application/json
 
-# {
-# "author": "Steve hello Gelsi",
-# "title": "Tesla hello reaches milestone on autopilot efforts",
-# "description": "Tesla Inc. founder Elon Musk on Thursday said the company's full self-driving beta is now available to any Tesla owner in North America who requests it on their car screen, if they have bought the option. In a Tweet, Musk congratulated the Tesla autopilot and…",
-# "url": "https://www.marketwatch.com/story/tesla-reaches-milestone-on-autopilot-efforts-2022-11-25",
-# "urlToImage": "https://s.wsj.net/public/resources/MWimages/MW-GP644_MicroS_ZG_20180906154215.jpg",
-# "publishedAt": "2022-11-25T14:41:42Z",
-# "content": "Tesla Inc. \r\n TSLA,\r\n -1.15%\r\nfounder Elon Musk on Thursday said the company's full self-driving beta is now available to any Tesla owner in North America who requests it on their car screen, if they… [+281 chars]"
-# }
+{
+"author": "Efe hello2 Udin",
+"title": "Elon hello3 Musk has plans to make a smartphone but only if…",
+"description": "If we are hello3 sure of anything about Elon Musk, it should be his controversial nature. Elon Musk has “funny” views about several topics. He has ...\nThe post Elon Musk has plans to make a smartphone but only if… appeared first on Gizchina.com.",
+"url": "https://www.gizchihello3na.com/2022/11/26/elon-musk-has-plans-to-make-a-smartphone-but-only-if/",
+"urlToImage": "https://www.gizchina.com/wp-content/uploads/images/2022/11/imagem_2022-11-18_211111673.png",
+"publishedAt": "2022-11-26T09:22:14Z",
+"content": "If  hello3 we are sure of anything about Elon Musk, it should be his controversial nature. Elon Musk has “funny” views about several topics. He has always expressed his dissatisfaction with Twitter suppressi… [+5391 chars]"
+}
