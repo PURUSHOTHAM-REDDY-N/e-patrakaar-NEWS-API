@@ -22,14 +22,8 @@ const articleSchema = new mongoose.Schema({
         required:true,
         unique:true
     },
-    urlToImage:{
+    images:{
         type:String,
-        required:true,
-        
-    },
-    publishedAt:{
-        type:Date,
-        default:Date.now
     },
     content:{
         type:String,
@@ -37,7 +31,7 @@ const articleSchema = new mongoose.Schema({
         unique:true
     }
 
-} , { _id: false })
+} , { _id: false , timestamps:true})
 
 articleSchema.plugin(autoIncrement);
 

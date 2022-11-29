@@ -3,7 +3,9 @@ const router = express.Router();
 
 const {postArticle,getArticle} = require('../controllers/articleController')
 
-router.post("/postarticle",postArticle)
+const upload = require("../middleware/upload")
+
+router.post("/postarticle",upload, postArticle)
 
 // router.post("/getarticle",postArticle)
 

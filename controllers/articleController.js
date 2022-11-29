@@ -36,22 +36,31 @@ module.exports.postArticle=async (req,res,next)=>{
     try {
     console.log(req.body);
 
-    const {author,title,description,url,urlToImage,publishedAt,content}=req.body
+    const {author,title,description,content}=req.body
 
-    const article=await Articles.create({
-        author,
-        title,
-        description,
-        url,
-        urlToImage,
-        publishedAt,
-        content
+    const article= new Articles({
+        author:author,
+        title:title,
+        description:description,
+        content:content
     })
 
-    res.status(201).json({article:article._id,created:true})
+    if(req.files){
+        let path = ""
+        req.files.forEach(function(files,index,arr){
+            path = path+files.path+","
+        });
+        path = path.substring(0,path.lastIndexOf(","))
+        article.images=path
+    }
+    article.save()
+
+    
+    res.status(201).json({created:true})
 } catch (err){
     const errors = handleErrors(err)
-    res.json({errors,created:false})
+    console.log(err)
+    res.json({err,created:false})
 }
 }
 
