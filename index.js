@@ -13,7 +13,7 @@ mongoose
   .connect(process.env.URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((res) => {
     console.log("database connected");
-    app.listen(process.env.PORT || 8000, () => {
+    app.listen(process.env.PORT || 80, () => {
       console.log(`server running on ${process.env.PORT}`);
     });
   })
