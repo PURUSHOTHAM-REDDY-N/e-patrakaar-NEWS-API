@@ -45,7 +45,7 @@ module.exports.postArticle=async (req,res,next)=>{
         content:content,
         category:category,
         tag:tags,
-        keyword:keyword
+        keyword:keywords
     })
 
     if(req.files){
