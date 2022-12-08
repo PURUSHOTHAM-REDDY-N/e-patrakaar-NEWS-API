@@ -36,7 +36,7 @@ module.exports.postArticle=async (req,res,next)=>{
     try {
     console.log(req.body);
 
-    const {author,title,description,content,category}=req.body
+    const {author,title,description,content,category,tags,keywords}=req.body
 
     const article= new Articles({
         author:author,
