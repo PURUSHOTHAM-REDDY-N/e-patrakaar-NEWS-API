@@ -36,13 +36,16 @@ module.exports.postArticle=async (req,res,next)=>{
     try {
     console.log(req.body);
 
-    const {author,title,description,content}=req.body
+    const {author,title,description,content,category}=req.body
 
     const article= new Articles({
         author:author,
         title:title,
         description:description,
-        content:content
+        content:content,
+        category:category,
+        tag:tags,
+        keyword:keyword
     })
 
     if(req.files){
