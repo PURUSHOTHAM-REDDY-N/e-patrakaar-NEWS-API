@@ -29,6 +29,21 @@ const articleSchema = new mongoose.Schema({
         type:String,
         required:true,
         unique:true
+    },
+    
+ //Added Category whose type is string and tags, keywords can store 
+    
+    category:{
+        type: String,
+        required: true
+    },
+    tags: {
+        type: String,
+        required: true
+    },
+    keywords: {
+        type: String,
+        required: true
     }
 
 } , { _id: false , timestamps:true})

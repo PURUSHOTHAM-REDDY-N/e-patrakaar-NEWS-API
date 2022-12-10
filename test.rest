@@ -1,4 +1,4 @@
-GET http://localhost:8001/postfilter?author=eqwd2q
+GET http://localhost:80/everything
 # Content-Type: application/json
 
 # {

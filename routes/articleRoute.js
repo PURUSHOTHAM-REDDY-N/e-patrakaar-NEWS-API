@@ -24,6 +24,37 @@ router.get("/postfilter", async (req, res) => {
 
   let data;
 
+  if(req.query.category){
+    //console.log(req.query.category)
+    data = await Article.find({
+      "$or": [{
+        category: {
+          $regex: req.query.category
+        }
+      }]
+    });
+  }
+
+  if(req.query.tag){
+    data = await Article.find({
+      "$or": [{
+        tags: {
+          $regex: req.query.tag
+        }
+      }]
+    });
+  }
+
+  if(req.query.keyword){
+    data = await Article.find({
+      "$or": [{
+        keywords: {
+          $regex: req.query.keyword
+        }
+      }]
+    });
+  }
+
   if (req.query.author) {
     data = await Article.find({
       $or: [
